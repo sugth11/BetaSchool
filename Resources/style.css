@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 500;
+    color:rgb(31, 30, 30);
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+/* Header */
+.header{
+    height:16.7vh;
+    background-color:whitesmoke;
+
+}
+
+.logo{
+   padding-top: 1%;
+   padding-left: 8%;
+}
+.schoolName{
+    font-size: 55%;
+    /* color:rgb(0, 183, 255); */
+    color:rgb(31, 30, 30);
+}
+.schoolName b{
+    display: block;
+    font-size:250%;
+    color:rgb(0, 183, 255);
+    text-shadow: 1px 1px rgb(52, 165, 240);
+}
+.admission a{
+    display: inline-block;
+    margin-top: 4%;
+    text-decoration-line: none;
+    padding:3% 5% 3% 1%;
+    background-color: rgb(0, 183, 255);
+    color:white;
+    font-size: 120%;
+    font-weight: 800;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.admission a p{
+    /* color:rgb(230, 233, 85); */
+    font-weight: 800;
+    text-align: center;
+    color:rgb(31, 30, 30);
+}
+.call{
+   padding-top: 2%;
+   text-align: center;
+}
+.ion-ios7-telephone{
+    margin-left: 4%;
+}
+.ion-ios7-telephone, .ion-android-mail{
+    display: block;
+    font-size: 120%;
+    padding:0px 10px;
+}
+.row{
+    width: 1140px;
+    margin:auto;
+}
+/* NavBars */
+nav{
+    background-color: rgb(0, 183, 255);
+    clear: both;
+}
+
+
+nav ul li{
+    display:inline-block;
+    width:10%;
+    height:5.5vh;
+   line-height: 270%;
+   text-align:center; 
+}
+nav ul li a:link,nav ul li a:visited {
+    transition: 0.4s;
+    text-decoration-line: none;
+    color:rgb(31, 30, 30);
+    padding: 14.5px 12px 13px 12px;
+}
+nav ul li a:hover {
+    background-color:whitesmoke;
+    color: rgb(0, 183, 255);
+}
+.headerBackground{
+    background-image:linear-gradient(rgba(114, 119, 122, 0.8),rgb(0,0,0,0.6)), url(/Contents/headerBackgroundimage.jpg);
+    background-position: center;
+    background-size: cover;
+    height:80vh;
+    background-repeat: no-repeat;
+}
+.headerBackground p{
+    position:absolute;
+    width:1140;
+    top:60%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:350%;
+    color:whitesmoke;
+}
+.headerBackground p b{
+    color:rgb(0, 183, 255);
+    text-shadow: 4px 4px rgb(31, 30, 30);
+}
+#section1{
+    
+    height:82vh;
+}
+h2{
+    margin-top:4%;
+    margin-bottom:4%;
+    font-size: 200%;
+    text-align: center;
+}
+h2::after{
+    display: block;
+    height: 4px;
+    background-color:rgb(0, 183, 255);
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+h3{
+font-size:150%;
+text-align: center;
+margin:4%;
+}
+h5{
+    font-size:20px;
+    margin-bottom: 15px;    
+}
+/* section:About us*/
+.tabeffect{
+    box-sizing: border-box;
+    background-color: rgb(52, 165, 240);
+    border-radius: 1%;
+    height:300px;
+}
+.tabbed{
+    margin:30px auto;
+    width:550px;
+    height:200px;
+    color:white;
+    border-top:1px solid rgb(0, 183, 255);
+}
+::selection{
+    background-color: rgb(0, 183, 255);
+}
+.tabbed > input{
+     display:none;
+}
+.tabbed > label{
+    font-weight: 800;
+    font-size: 24px;
+    display:block;
+    float:left;
+    padding:12px 20px;
+    margin-right:5px;
+    cursor:pointer;
+    border-radius: 5%;
+    transition:background-color 1.3s
+}
+.tabbed label:hover, .tabbed input:checked + label{
+    background-color:white;
+    color:rgb(114, 112, 112);
+}
+.tabs{
+    clear:both;
+    perspective:600px;
+}
+  .tabs > div{ 
+    width:550px;
+    height: 242px;
+    position:absolute;
+    font-size: 20px;
+    color:rgb(63, 60, 60);
+    background: rgb(246, 248, 250);
+    border:1px solid #999;
+    border-radius: 1%;
+    padding :10px 30px 40px;
+    line-height:1.4em;
+    opacity:0; 
+    z-index:0;
+    transform:rotateX(-45deg);
+    transform-origin:top center;
+    transition:opacity 0.3s, transform 2s;
+}
+#vision:checked ~ .tabs > div:nth-of-type(1),
+#mission:checked ~ .tabs > div:nth-of-type(2),
+#motto:checked ~ .tabs > div:nth-of-type(3){
+    transform: rotateX(0deg);
+    opacity:1;
+    z-index:1;
+}
+/* News & Events */
+.newsTicker{
+    margin-top: 30px;
+    background: rgb(114, 112, 112);
+    box-sizing: border-box;
+    height:300px;
+    overflow:hidden;
+    padding:10px;
+    max-width:550px;
+    border-radius: 1%;
+}
+@keyframes ticker{
+    0% {margin-top:0;
+    }
+    30% {margin-top:-20%;
+    }
+    60% {margin-top:-43%;
+    }
+    90% {margin-top:-65%;
+    }
+    100% {margin-top:-0%;
+    }
+}
+.newsTicker ul{
+    color:white;
+    padding:0;
+    margin:0;
+    animation: ticker 6s infinite;
+    animation-timing-function: linear;
+}
+.newsTicker ul:hover{
+    animation-play-state: paused;
+}
+.newsTicker ul li{
+    margin-left: 5%;
+    font-size:18px;
+    line-height:36px;
+}
+/* Section: Gallery */
+.sectionGallery{
+    padding:0;
+    height:90vh;
+}
+.galleryPhotos{
+    list-style: none;
+    width:100%;
+}
+.galleryPhotos li{
+    display:block;
+    float:left;
+    width:33.333333%;
+}
+.singlePhoto{
+    margin:0;
+    width:100%;
+    background-color:rgb(0, 183, 255);
+    overflow: hidden;
+}
+.singlePhoto img{
+    width:100%;
+    height:500px;
+    opacity:0.9;
+    -webkit-transition: .6s ease-in-out;
+	transition: .6s ease-in-out;
+}
+.singlePhoto img:hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    opacity:1;
+}
+/* Facilities and Activities */
+.sectionInfra1{
+    margin-top: 17%;
+}
+.infraSingle{
+    padding:1% 1% 8% 1%;
+    background-color: rgb(0, 183, 255);
+}
+.infraSingle img{
+  width:100%;
+  height:180px;
+  margin-bottom: 40px;
+  -webkit-transition: .6s ease-in-out;
+	transition: .6s ease-in-out;
+}
+.infraSingle img:hover{
+    -webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+.infraSingle p{
+    text-align: center;
+}
+.facilityRadio{
+    text-align:center;
+    letter-spacing: 5px;
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+/* Testimonials */
+#section5{
+    background-image: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.2)),url(/Contents/testiback2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:black;
+    height: 75vh;
+}
+.testi cite img{
+   border-radius: 50%;
+   display:block;
+ 
+}
+blockquote{
+    text-align: justify;
+    font-style: italic;
+}
+blockquote::before{
+    content: "\201C";
+    font-size: 400%;
+}
+.testi cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+    margin-bottom: 70px;
+}
+/* Admission */
+.sideform p{
+    border:2px solid;
+    margin:0 10% 12% 0;
+    height:172px;
+    font-weight:800;
+    padding:20% 5%;
+    color:rgb(41, 40, 40);
+    letter-spacing: 1%;
+    font-size: 20;
+    text-align:justify;   
+}
+.sideform1{
+    background-color: rgb(0, 183, 255);
+}
+.sideform2{
+    background-color: rgb(241, 241, 80);
+}
+.sideform3{
+    background-color: greenyellow;
+}
+.sideform4{
+    background-color: palevioletred;
+    padding-top:10% !important;
+}
+form{
+    border:2px solid;
+    padding:5% 3% 4.5% 3%;
+    background-color: rgb(41, 40, 40);
+    /* background-color: rgb(114, 112, 112); */
+    color:white;
+ 
+    
+}
+form label{
+        display: inline-block;
+        margin-bottom: 3%;
+        width:30%;
+}
+form input,form textarea,form select,form label{
+    margin-top: 2%;
+}
+form input,form textarea,form select{
+    margin-left:1.6%;  
+    display:inline-block;
+    width:40%;
+    height:40px;
+
+}
+form textarea{
+    height:70px;
+}
+.gender{
+    display:inline;
+    width:5%;
+    height:20px;
+}
+.button{
+    width:47.8%;
+    margin:3% 20% 4% 31.5%;
+    cursor: pointer;
+}
+.submit{
+    /* background-color: rgb(0, 183, 255); */
+    background-color: greenyellow;
+}
+.reset{
+    background-color: rgb(0, 183, 255);
+}
+.footer1{
+    background-color: rgb(215, 218, 218);
+    background-size: cover;
+    
+}
+.footer2{
+    background-color: rgb(0, 183, 255);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+h4{
+    margin:5% 0 5% 0;
+    font-size:120%;
+    font-weight: 800;
+}
+address{
+    font-size: 20px;
+    line-height: 120%;
+}
+.contact a{
+    color:rgb(31, 30, 30);
+    text-decoration-line: none;
+    
+}
+.footerNavFollow{
+    line-height: 120%;
+}
+.footerNavFollow li{
+    list-style: none;
+    font-size: 20px;
+}
+.footerNavFollow li a{
+    color:rgb(31, 30, 30);
+    text-decoration-line: none;   
+}
+.social{
+    margin-left: 12%; 
+    font-size: 28px;
+    margin-bottom: 10px;
+    display:block;
+}
+.ion-social-facebook{
+    border:2px solid rgb(0, 183, 255);
+    width:30px;
+    padding-left: 8px;
+    border-radius: 30%;
+    background-color: rgb(0, 183, 255);
+    color:white;
+} 
+.ion-social-twitter{
+    color:rgb(0, 183, 255);
+} 
+.ion-social-instagram{
+    background: -webkit-linear-gradient(rgb(128, 39, 201), rgb(235, 82, 44));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+} 
+.ion-social-youtube {
+    color: rgb(145, 22, 22);
+    padding:0;
+}
